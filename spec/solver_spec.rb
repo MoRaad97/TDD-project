@@ -22,4 +22,22 @@ context 'reverse Method testing' do
     expect(solver.reverse("eye")).to eq("eye")
     end
 end
+
+context 'fizzbuzz Method testing' do
+  it 'should return "fizzbuzz" if the number divisible by 3 and 5' do
+    expect(solver.fizzbuzz(15)).to eq("fizzbuzz")
+  end
+
+  it 'should return "fizz" if the number Only divisible by 3' do
+    expect(solver.fizzbuzz(3)).to eq("fizz")
+  end
+  
+  it 'should return "buzz" if the number Only divisible by 5' do
+    expect(solver.fizzbuzz(5)).to eq("buzz")
+  end
+  
+  it 'should return input number as string if the number not divisible by 3 or 5' do
+    expect(solver.fizzbuzz(7)).to eq("7")
+  end
+end
 end
