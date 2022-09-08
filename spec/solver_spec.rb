@@ -8,7 +8,7 @@ describe Solver do
     end
 
     it 'should return error if the value < 0' do
-      expect(solver.factorial(-3)).to eq("Error")
+      expect { solver.factorial(-3) }.to raise_error(ArgumentError)
     end
 
     it 'should return Factorial for postive numbers' do
